@@ -18,7 +18,7 @@ const TheProblemSection = () => {
           </span>
         </div>
 
-        <p className="text-2xl leading-relaxed text-white sm:text-3xl">
+        <p className="text-[14px] leading-relaxed text-white sm:text-[20px]">
           Every day, millions of Nigerians save in Ajo and Esusu circles, borrow
           from cooperatives, and hand thrift collectors money that never touches
           a bank.{" "}

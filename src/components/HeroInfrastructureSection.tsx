@@ -50,12 +50,12 @@ const HeroInfrastructureSection = () => {
   return (
     <MarginWrapper
       outterWrapperClassName="bg-white overflow-x-hidden"
-      innerWrapperClassName="grid max-w-6xl grid-cols-1 items-center gap-16 sm:grid-cols-2 sm:gap-20"
+      innerWrapperClassName="grid grid-cols-1 items-center gap-16 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2"
       showBrDecorativelines
     >
       {/* Left: copy */}
       <div>
-        <h1 className="text-4xl leading-tight text-dark-green sm:text-5xl">
+        <h1 className="text-[14px] leading-tight text-dark-green sm:text-[20px]">
           <span className="font-bold">
             The infrastructure behind Nigeria&apos;s next generation of
           </span>{" "}
@@ -64,7 +64,7 @@ const HeroInfrastructureSection = () => {
           </span>
         </h1>
 
-        <p className="mt-6 max-w-lg text-sm leading-relaxed text-gray-2 font-light">
+        <p className="mt-6 text-sm leading-relaxed text-gray-2 font-light">
           Grid Finance is multi-tenant financial infrastructure. Any business, a
           bank, a fintech, a cooperative, an SME, can launch lending, savings,
           and digital Ajo or Esusu products under its own brand, in days rather

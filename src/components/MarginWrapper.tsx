@@ -19,7 +19,7 @@ const MarginWrapper = ({
       `}
     >
       <div
-        className={`mx-auto max-w-7xl px-4 sm:px-6 ${innerWrapperClassName} ${(showTrBlDecorativelines || showBrDecorativelines) && "relative z-1"}`}
+        className={`mx-auto sm:w-[80vw] px-4 sm:px-6 ${innerWrapperClassName} ${(showTrBlDecorativelines || showBrDecorativelines) && "relative z-1"}`}
       >
         {children}
       </div>
