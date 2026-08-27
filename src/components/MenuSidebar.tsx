@@ -86,7 +86,7 @@ const MenuSidebar = ({
       />
 
       <aside
-        className={`absolute right-0 top-0 flex h-full w-full max-w-xs flex-col bg-pale-white shadow-xl
+        className={`absolute right-0 top-0 flex h-full w-[60vw] flex-col bg-pale-white shadow-xl
                       transition-transform duration-300 ease-out ${
                         mobileOpen ? "translate-x-0" : "translate-x-full"
                       }`}
