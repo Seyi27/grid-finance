@@ -37,6 +37,7 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
   const handleClose = () => {
     onClose();
     setView("modal");
+    setEmail("");
   };
 
   const waitlistModal = () => (
