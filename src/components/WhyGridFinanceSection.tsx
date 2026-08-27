@@ -1,7 +1,7 @@
 import Image from "next/image";
-import whyGridFinanceImg from "../assets/images/why-grid-finance-img.png";
 import infrastructureImg3 from "../assets/images/infrastructure-img-3.png";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const reasons = [
   {
@@ -40,18 +40,13 @@ const WhyGridFinanceSection = () => {
   return (
     <MarginWrapper
       outterWrapperClassName="border-y border-pale-yellow bg-white"
-      innerWrapperClassName="grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-20"
+      innerWrapperClassName="grid grid-cols-1 gap-16 md:grid-cols-1 lg:grid-cols-2"
     >
       {/* Left: heading + image */}
       <div>
-        <div className="mb-6 flex items-center gap-2">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            WHY GRID FINANCE
-          </span>
-        </div>
+        <SectionHeader text="why grid finance" textColor="text-green-1" />
 
-        <h2 className="text-4xl leading-13 text-dark-green sm:text-5xl">
+        <h2 className="text-[40px] leading-13 text-dark-green sm:text-[45px]">
           <span className="font-bold">Built for the way </span>
           <span className="font-bold">Nigeria</span>{" "}
           <span className="font-serif italic text-green-1">
@@ -59,7 +54,7 @@ const WhyGridFinanceSection = () => {
           </span>
         </h2>
 
-        <div className="relative mt-5 aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl">
+        <div className="relative mt-5 aspect-[4/5] w-full overflow-hidden rounded-2xl">
           <Image
             src={infrastructureImg3}
             alt="traditional"
@@ -78,14 +73,14 @@ const WhyGridFinanceSection = () => {
               i === 0 ? "pt-0" : ""
             } ${i !== reasons.length - 1 ? "border-b border-pale-yellow" : ""}`}
           >
-            <span className="font-serif text-2xl italic text-green-1">
+            <span className="font-serif text-[25px] italic text-green-1">
               {reason.number}
             </span>
             <div>
               <h3 className="text-base font-semibold text-dark-green">
                 {reason.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-2 font-light">
+              <p className="mt-2 text-[14px] leading-relaxed text-gray-2 font-light">
                 {reason.description}
               </p>
             </div>

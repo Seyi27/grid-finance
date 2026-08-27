@@ -1,6 +1,7 @@
 import Image from "next/image";
 import problemImg from "../assets/images/problem-img.png";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const TheProblemSection = () => {
   return (
@@ -11,14 +12,9 @@ const TheProblemSection = () => {
     >
       {/* Left: copy */}
       <div>
-        <div className="mb-8 flex items-center gap-2">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-yellow-green uppercase">
-            THE PROBLEM
-          </span>
-        </div>
+        <SectionHeader text="the problem" textColor="text-yellow-green" />
 
-        <p className="text-[14px] leading-relaxed text-white sm:text-[20px]">
+        <p className="text-[14px] leading-relaxed text-white md:text-[20px]">
           Every day, millions of Nigerians save in Ajo and Esusu circles, borrow
           from cooperatives, and hand thrift collectors money that never touches
           a bank.{" "}

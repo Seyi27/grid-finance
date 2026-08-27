@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import { FeatureGridProps } from "../types/types";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const FeatureGrid = ({
   eyebrow,
@@ -13,18 +14,11 @@ const FeatureGrid = ({
   columns = 2,
   breakLine,
 }: FeatureGridProps) => {
-  const gridColsClass = columns === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2";
+  const gridColsClass = columns === 3 ? "lg:grid-cols-3" : "sm:grid-cols-2";
 
   return (
     <MarginWrapper outterWrapperClassName={`${backgroundColor}`}>
-      {eyebrow && (
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            {eyebrow}
-          </span>
-        </div>
-      )}
+      {eyebrow && <SectionHeader text={eyebrow} textColor="text-green-1" />}
 
       <h2 className="max-w-3xl text-3xl font-bold leading-tight text-dark-green sm:text-4xl">
         {heading}

@@ -33,9 +33,9 @@ const PricingSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:items-start">
+        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {/* Starter */}
-          <div className="flex h-full flex-col rounded-3xl border border-pale-cream p-8">
+          <div className="flex h-full flex-col md:w-[50vw] md:mx-auto lg:w-full lg:m-0 rounded-3xl border border-pale-cream p-8">
             <h3 className="text-lg font-bold text-dark-green">Starter</h3>
             <p className="mt-1 text-sm text-gray-1 font-light">
               For a single product and a growing member base
@@ -77,7 +77,7 @@ const PricingSection = () => {
           </div>
 
           {/* Growth — highlighted */}
-          <div className="relative flex h-full flex-col rounded-3xl bg-dark-green p-8 pt-10">
+          <div className="relative flex h-full flex-col md:w-[50vw] md:mx-auto lg:w-full lg:m-0 rounded-3xl bg-dark-green p-8 pt-10">
             <span className="absolute -top-3 left-8 rounded-full bg-yellow-green px-3 py-1 text-xs font-semibold text-dark-green">
               Most Popular
             </span>
@@ -130,7 +130,7 @@ const PricingSection = () => {
           </div>
 
           {/* Enterprise */}
-          <div className="flex h-full flex-col rounded-3xl border border-pale-cream p-8">
+          <div className="flex h-full flex-col md:w-[50vw] md:mx-auto lg:w-full lg:m-0 rounded-3xl border border-pale-cream p-8">
             <h3 className="text-lg font-bold text-dark-green">Enterprise</h3>
             <p className="mt-1 text-sm text-gray-1 font-light">
               For banks, large cooperatives & high-volume tenants

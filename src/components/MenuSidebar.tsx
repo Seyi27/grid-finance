@@ -73,7 +73,7 @@ const MenuSidebar = ({
 
   return (
     <div
-      className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
+      className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-300 ${
         mobileOpen
           ? "pointer-events-auto opacity-100"
           : "pointer-events-none opacity-0"

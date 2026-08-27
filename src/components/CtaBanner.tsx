@@ -9,6 +9,7 @@ import MarginWrapper from "./MarginWrapper";
 import { useRouter } from "next/navigation";
 import WaitlistModal from "./WaitlistModal";
 import { useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const CtaBanner = ({
   eyebrow,
@@ -35,12 +36,7 @@ const CtaBanner = ({
         <div className="relative flex h-full items-center p-6 sm:p-10">
           <div className="max-w-xl">
             {eyebrow && (
-              <div className="mb-3 flex items-center gap-3">
-                <span className="h-px w-6 bg-yellow-green" />
-                <span className="text-[10px] sm:text-[14px] font-semibold tracking-widest text-yellow-green uppercase">
-                  {eyebrow}
-                </span>
-              </div>
+              <SectionHeader text={eyebrow} textColor="text-yellow-green" />
             )}
 
             <h2 className="text-[30px] font-bold leading-tight text-white sm:text-[40px]">

@@ -9,6 +9,7 @@ import {
 import goalBasedSavings from "../assets/images/goal-based-savings.png";
 import Link from "next/link";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const features = [
   {
@@ -45,18 +46,13 @@ const SavingsAsAServiceSection = () => {
   return (
     <MarginWrapper
       outterWrapperClassName="bg-pale-white"
-      innerWrapperClassName="grid grid-cols-1 items-center gap-16 sm:grid-cols-2 sm:gap-20"
+      innerWrapperClassName="grid grid-cols-1 gap-16 md:grid-cols-1 lg:grid-cols-2"
     >
       {/* Left */}
       <div>
-        <div className="mb-6 flex items-center gap-2">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            Savings as a Service
-          </span>
-        </div>
+        <SectionHeader text="saving as a service" textColor="text-green-1" />
 
-        <h2 className="text-4xl leading-13 text-dark-green sm:text-5xl">
+        <h2 className="text-[40px] leading-13 text-dark-green sm:text-[45px]">
           <span className="font-bold">Give your customers a </span>
           <br />
           <span className="font-bold">reason to save with you, </span>
@@ -65,7 +61,7 @@ const SavingsAsAServiceSection = () => {
           </span>{" "}
         </h2>
 
-        <p className="mt-6 text-sm leading-relaxed text-gray-2 font-light">
+        <p className="mt-6 text-[14px] leading-relaxed text-gray-2 font-light">
           Grid Finance's Savings as a Service lets you launch fixed, flexible,
           and goal-based savings products. Fully branded, fully compliant, and
           connected to the same infrastructure powering your lending.
@@ -77,7 +73,7 @@ const SavingsAsAServiceSection = () => {
               key={title}
               className={`flex gap-4 py-6 ${
                 i === 0 ? "pt-8" : ""
-              } border-t border-[#EAEAE5]`}
+              } border-t border-pale-yellow`}
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-3 text-forest-green">
                 {icon}
@@ -86,7 +82,7 @@ const SavingsAsAServiceSection = () => {
                 <h3 className="text-base font-semibold text-dark-green">
                   {title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-gray-2 font-light">
+                <p className="mt-1 text-[14px] leading-relaxed text-gray-2 font-light">
                   {description}
                 </p>
               </div>
@@ -96,7 +92,7 @@ const SavingsAsAServiceSection = () => {
 
         <Link
           href="/products/savings-as-a-service"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-green-1 underline underline-offset-4"
+          className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium text-green-1 underline underline-offset-4"
         >
           Learn more about Savings as a Service
           <BsArrowRight className="h-4 w-4" />

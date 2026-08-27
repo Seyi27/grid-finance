@@ -9,6 +9,7 @@ import {
 import loanBookImg from "../assets/images/loan-book.png";
 import Link from "next/link";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const features = [
   {
@@ -41,23 +42,18 @@ const LendingAsAServiceSection = () => {
   return (
     <MarginWrapper
       outterWrapperClassName="bg-white"
-      innerWrapperClassName="grid grid-cols-1 items-center gap-16 sm:grid-cols-2 sm:gap-20"
+      innerWrapperClassName="grid grid-cols-1 gap-16 md:grid-cols-1 lg:grid-cols-2"
     >
       {/* Left: loan book card */}
-      <div className="sm:sticky sm:top-24 sm:self-start w-full overflow-hidden rounded-2xl">
+      <div className="lg:sticky lg:top-24 lg:self-start w-full overflow-hidden rounded-2xl">
         <Image src={loanBookImg} alt="load book" className="object-cover" />
       </div>
 
       {/* Right: copy + features */}
       <div>
-        <div className="mb-6 flex items-center gap-2">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            LENDING AS A SERVICE
-          </span>
-        </div>
+        <SectionHeader text="lending as a service" textColor="text-green-1" />
 
-        <h2 className="text-4xl leading-13 text-dark-green sm:text-5xl">
+        <h2 className="text-[40px] leading-13 text-dark-green sm:text-[45px]">
           <span className="font-bold">Launch a full lending business</span>
           <br />
           <span className="font-serif italic text-green-1">
@@ -66,7 +62,7 @@ const LendingAsAServiceSection = () => {
           <span className="font-bold">of core bankingcode.</span>
         </h2>
 
-        <p className="mt-6 text-sm leading-relaxed text-gray-2 font-light">
+        <p className="mt-6 text-[14px] leading-relaxed text-gray-2 font-light">
           Grid Finance&apos;s Lending as a Service covers everything you need to
           originate, disburse, manage, and collect loans across web, mobile,
           USSD, and API, all under your own brand.
@@ -87,7 +83,7 @@ const LendingAsAServiceSection = () => {
                 <h3 className="text-base font-semibold text-dark-green">
                   {title}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-gray-2 font-light">
+                <p className="mt-1 text-[14px] leading-relaxed text-gray-2 font-light">
                   {description}
                 </p>
               </div>
@@ -97,7 +93,7 @@ const LendingAsAServiceSection = () => {
 
         <Link
           href="/products/lending-as-a-service"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-green-1 underline underline-offset-4"
+          className="mt-4 inline-flex items-center gap-2 text-[14px] font-medium text-green-1 underline underline-offset-4"
         >
           Learn more about Lending as a Service
           <BsArrowRight className="h-4 w-4" />

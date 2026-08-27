@@ -120,10 +120,11 @@ pay run, with no chasing required.`,
       />
 
       <CtaBanner
-        eyebrow="For fintech"
-        heading="Talk to our team about"
-        headingAccent="your fintech's lending roadmap."
-        description="Whether you're launching a lending business, a savings product, or digitizing your Ajo or Esusu group, Grid Finance gives you the infrastructure to do it under your own brand, faster and cheaper than building it yourself."
+        eyebrow="For HR & Payroll"
+        heading="Talk to us about adding salary-backed loans"
+        headingAccent="to your benefits stack."
+        description="Salary-backed loans and automated savings, deducted right at payroll — live
+inside your existing platform."
       />
     </div>
   );

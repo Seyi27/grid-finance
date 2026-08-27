@@ -1,5 +1,6 @@
 import { StepTimelineProps } from "../types/types";
 import MarginWrapper from "./MarginWrapper";
+import SectionHeader from "./SectionHeader";
 
 const StepTimeline = ({
   eyebrow,
@@ -10,14 +11,7 @@ const StepTimeline = ({
 }: StepTimelineProps) => {
   return (
     <MarginWrapper outterWrapperClassName={`${backgroundColor}`}>
-      {eyebrow && (
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            {eyebrow}
-          </span>
-        </div>
-      )}
+      {eyebrow && <SectionHeader text={eyebrow} textColor="text-green-1" />}
 
       <h2 className="max-w-3xl text-3xl font-bold leading-tight text-dark-green sm:text-4xl">
         {heading}
@@ -32,7 +26,7 @@ const StepTimeline = ({
       </h2>
 
       <div
-        className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-[repeat(var(--steps),1fr)] sm:gap-8"
+        className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8"
         style={{ ["--steps" as string]: steps.length }}
       >
         {steps.map((step, index) => (

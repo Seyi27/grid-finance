@@ -23,7 +23,7 @@ const NarrativeText = ({ segments }: NarrativeTextProps) => {
       {paragraphs.map((paragraph, pIndex) => (
         <p
           key={pIndex}
-          className="text-sm leading-relaxed sm:text-[16px] [&:not(:first-child)]:mt-2"
+          className="text-[14px] leading-relaxed sm:text-[16px] [&:not(:first-child)]:mt-2"
         >
           {paragraph.map((segment, sIndex) => (
             <span key={sIndex} className={VARIANT_CLASSES[segment.variant]}>

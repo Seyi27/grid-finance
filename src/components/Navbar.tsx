@@ -130,14 +130,14 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop nav links */}
-      <div className="hidden sm:flex sm:items-center sm:gap-8">
+      <div className="hidden lg:flex lg:items-center lg:gap-8">
         {NAV_ITEMS.map((item) => (
           <DesktopNavItem key={item.label} item={item} />
         ))}
       </div>
 
       {/* Desktop right actions */}
-      <div className="hidden sm:flex sm:items-center sm:gap-6">
+      <div className="hidden lg:flex sm:items-center lg:gap-6">
         <a
           href="#"
           className="text-sm font-medium text-dark-green transition-colors"
@@ -158,7 +158,7 @@ const Navbar = () => {
       <button
         type="button"
         onClick={() => setMobileOpen(true)}
-        className="flex items-center justify-center rounded-lg p-1.5 text-dark-green md:hidden"
+        className="flex items-center justify-center rounded-lg p-1.5 text-dark-green lg:hidden"
         aria-label="Open menu"
       >
         <BsList size={24} />

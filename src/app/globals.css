@@ -20,8 +20,8 @@
   --green-5: #c6f1351f;
   --green-6: #16321f;
   --green-7: #092718;
-  --green-8: #1B3B26;
-  --green-9: #0C1F14;
+  --green-8: #1b3b26;
+  --green-9: #0c1f14;
 
   --yellow-green: #c8e06a;
   --lime-tint-green: #edf9c9;
@@ -30,6 +30,17 @@
   --dark-green: #0c2217;
   --forest-green: #0e3b24;
   --jungle-green: #16291e;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @theme inline {

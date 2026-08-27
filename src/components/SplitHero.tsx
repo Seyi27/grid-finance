@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import { HeadingSegment, SplitHeroProps } from "../types/types";
 import MarginWrapper from "./MarginWrapper";
 import WaitlistModal from "./WaitlistModal";
 import { useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const SplitHero = ({
   eyebrow,
@@ -31,17 +32,12 @@ const SplitHero = ({
   return (
     <MarginWrapper
       outterWrapperClassName="bg-white"
-      innerWrapperClassName="grid grid-cols-1 items-center gap-12 sm:grid-cols-2 sm:gap-16"
+      innerWrapperClassName="grid grid-cols-1 gap-12 md:grid-cols-1 lg:grid-cols-2"
     >
       {/* <div className="grid grid-cols-1 items-center gap-12 sm:grid-cols-2 sm:gap-16"> */}
       {/* Text column */}
       <div>
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            {eyebrow}
-          </span>
-        </div>
+        <SectionHeader text={eyebrow} textColor="text-green-1" />
 
         <h1 className="text-4xl font-bold leading-13 text-dark-green sm:text-5xl">
           {lines.map((line, lineIndex) => (

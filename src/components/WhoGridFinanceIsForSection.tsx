@@ -3,6 +3,7 @@ import { BsArrowRight, BsCheck } from "react-icons/bs";
 import whoGridFinanceIsForImg from "../assets/images/who-grid-finance-is-for-img.png";
 import MarginWrapper from "./MarginWrapper";
 import Link from "next/link";
+import SectionHeader from "./SectionHeader";
 
 const audiences = [
   {
@@ -39,70 +40,70 @@ const audiences = [
 
 const WhoGridFinanceIsForSection = () => {
   return (
-    <MarginWrapper outterWrapperClassName="bg-white">
+    <MarginWrapper
+      outterWrapperClassName="bg-white"
+      innerWrapperClassName="grid grid-cols-1 gap-5 lg:gap-16 md:grid-cols-1 lg:grid-cols-2"
+    >
       {/* Top row: heading (left) + CTA (right) */}
-      <div className="grid grid-cols-1 gap-5 sm:gap-16 sm:grid-cols-2">
-        <div>
-          <div className="mb-6 flex items-center gap-2">
-            <span className="h-px w-6 bg-yellow-green" />
-            <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-              WHO GRID FINANCE IS FOR
-            </span>
-          </div>
+      <div>
+        <SectionHeader
+          text="why grid finance is for"
+          textColor="text-green-1"
+        />
 
-          <h2 className="text-4xl leading-13 text-dark-green sm:text-5xl">
-            <span className="font-bold">One infrastructure,</span>
-            <br />
-            <span className="font-serif italic text-green-1">
-              many kinds of builders.
-            </span>
-          </h2>
+        <h2 className="text-4xl leading-13 text-dark-green sm:text-5xl">
+          <span className="font-bold">One infrastructure,</span>
+          <br />
+          <span className="font-serif italic text-green-1">
+            many kinds of builders.
+          </span>
+        </h2>
 
-          {/* Image with floating card */}
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl mt-10">
-            <Image
-              src={whoGridFinanceIsForImg}
-              alt="hand shake"
-              fill
-              className="object-cover"
-            />
-          </div>
+        {/* Image with floating card */}
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl mt-10">
+          <Image
+            src={whoGridFinanceIsForImg}
+            alt="hand shake"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Right column: CTA + list */}
+      <div>
+        <div className="flex justify-end">
+          <button className="rounded-full border border-pale-yellow px-6 py-3 text-[14px] font-medium text-dark-green hover:bg-pale-white cursor-pointer">
+            Get Started Free
+          </button>
         </div>
 
-        {/* Right column: CTA + list */}
-        <div>
-          <div className="flex justify-end">
-            <button className="rounded-full border border-pale-yellow px-6 py-3 text-sm font-medium text-dark-green hover:bg-pale-white cursor-pointer">
-              Get Started Free
-            </button>
-          </div>
-
-          <div className="mt-10">
-            {audiences.map((audience, i) => (
-              <div
-                key={audience.title}
-                className={`flex flex-col sm:flex-row items-start justify-between gap-6 py-8 ${
-                  i === 0 ? "pt-8" : ""
-                } border-t border-pale-yellow ${
-                  i === audiences.length - 1 ? "border-b" : ""
-                }`}
+        <div className="mt-10">
+          {audiences.map((audience, i) => (
+            <div
+              key={audience.title}
+              className={`flex flex-col sm:flex-row items-start justify-between gap-6 py-8 ${
+                i === 0 ? "pt-8" : ""
+              } border-t border-pale-yellow ${
+                i === audiences.length - 1 ? "border-b" : ""
+              }`}
+            >
+              <h3 className="w-40 shrink-0 text-base font-semibold text-dark-green">
+                {audience.title}
+              </h3>
+              <p className="flex-1 text-[14px] leading-relaxed text-gray-2 font-light">
+                {audience.description}
+              </p>
+              <Link
+                href={audience.href}
+                aria-label={`Learn more about ${audience.title}`}
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-pale-yellow text-dark-green transition hover:bg-pale-white cursor-pointer"
               >
-                <h3 className="w-40 shrink-0 text-base font-semibold text-dark-green">
-                  {audience.title}
-                </h3>
-                <p className="flex-1 text-sm leading-relaxed text-gray-2 font-light">
-                  {audience.description}
-                </p>
-                <Link href={audience.href}
-                    aria-label={`Learn more about ${audience.title}`}
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-pale-yellow text-dark-green transition hover:bg-pale-white cursor-pointer"
-                  >
-                    <BsArrowRight className="h-4 w-4" />
-                  {/* </button> */}
-                </Link>
-              </div>
-            ))}
-          </div>
+                <BsArrowRight className="h-4 w-4" />
+                {/* </button> */}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </MarginWrapper>

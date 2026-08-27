@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BsCheck } from "react-icons/bs";
 import MarginWrapper from "./MarginWrapper";
 import { HeadingSegment, SplitFeatureProps } from "../types/types";
+import SectionHeader from "./SectionHeader";
 
 const SplitFeature = ({
   eyebrow,
@@ -40,12 +41,7 @@ const SplitFeature = ({
 
   const textBlock = (
     <div>
-      <div className="mb-4 flex items-center gap-3">
-        <span className="h-px w-6 bg-yellow-green" />
-        <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-          {eyebrow}
-        </span>
-      </div>
+      <SectionHeader text={eyebrow} textColor="text-green-1" />
 
       <h2 className="text-3xl font-bold leading-tight text-dark-green sm:text-4xl">
         {lines.map((line, lineIndex) => (
@@ -118,7 +114,7 @@ const SplitFeature = ({
 
   return (
     <MarginWrapper outterWrapperClassName={`${backgroundColor}`}>
-      <div className="grid grid-cols-1 items-center gap-10 sm:grid-cols-2 sm:gap-16">
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {imagePosition === "left" ? (
           <>
             {imageBlock}

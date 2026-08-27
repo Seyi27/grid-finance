@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import MarginWrapper from "./MarginWrapper";
 import { CardGridProps } from "../types/types";
+import SectionHeader from "./SectionHeader";
 
 const CardGrid = ({
   eyebrow,
@@ -10,17 +11,8 @@ const CardGrid = ({
   items,
 }: CardGridProps) => {
   return (
-    <MarginWrapper
-      outterWrapperClassName={`${backgroundColor} py-10 sm:py-20`}
-    >
-      {eyebrow && (
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-px w-6 bg-yellow-green" />
-          <span className="text-xs font-semibold tracking-widest text-green-1 uppercase">
-            {eyebrow}
-          </span>
-        </div>
-      )}
+    <MarginWrapper outterWrapperClassName={`${backgroundColor} py-10 sm:py-20`}>
+      {eyebrow && <SectionHeader text={eyebrow} textColor="text-green-1" />}
 
       <h2 className="max-w-3xl text-3xl font-bold leading-tight text-dark-green sm:text-4xl">
         {heading}
@@ -34,7 +26,7 @@ const CardGrid = ({
         )}
       </h2>
 
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+      <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
         {items.map((item, index) => (
           <div
             key={index}
@@ -62,7 +54,7 @@ const CardGrid = ({
               {item.title}
             </h3>
             <p
-              className={`mt-2 text-sm leading-6 font-light ${
+              className={`mt-2 text-[14px] leading-6 font-light ${
                 item.highlighted ? "text-white/70" : "text-gray-1"
               }`}
             >
@@ -71,7 +63,7 @@ const CardGrid = ({
 
             <a
               href={item.linkHref}
-              className={`mt-6 inline-flex items-center gap-1.5 text-sm font-semibold ${
+              className={`mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold ${
                 item.highlighted
                   ? "text-yellow-green hover:text-green-2"
                   : "text-green-1 hover:text-dark-green"
