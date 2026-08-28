@@ -73,14 +73,14 @@ const HeroInfrastructureSection = () => {
 
         <div className="flex flex-wrap items-center gap-3">
           <button
-            className="inline-flex items-center gap-2 rounded-lg bg-forest-green px-5 py-3 text-sm font-semibold text-white transition hover:bg-black"
+            className="inline-flex items-center gap-2 rounded-lg bg-forest-green px-5 py-3 text-[14px] font-semibold text-white transition hover:bg-black"
             onClick={() => setWaitlistOpen(true)}
           >
             Join the waitlist
             <BsArrowRight className="h-4 w-4" />
           </button>
           <button
-            className="rounded-lg border border-pale-yellow px-5 py-3 text-sm font-semibold text-dark-green transition hover:bg-light-cream"
+            className="rounded-lg border border-pale-yellow px-5 py-3 text-[14px] font-semibold text-dark-green transition hover:bg-light-cream"
             onClick={() => router.push("/company/contact")}
           >
             Talk to Our Team
@@ -93,7 +93,7 @@ const HeroInfrastructureSection = () => {
               <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime-tint-green">
                 <BsCheck className="h-3 w-3 text-green-1" />
               </span>
-              <span className="text-sm text-gray-2 font-light">{item}</span>
+              <span className="text-[14px] text-gray-2 font-light">{item}</span>
             </li>
           ))}
         </ul>
@@ -111,7 +111,7 @@ const HeroInfrastructureSection = () => {
           className="pointer-events-none absolute -bottom-10 -right-10 w-3/4 opacity-70"
         />
 
-        <div className="relative w-full h-[70vh] sm:h-[60vh] overflow-hidden rounded-2xl shadow-lg">
+        <div className="relative w-full h-[70vh] sm:h-[65vh] overflow-hidden rounded-2xl shadow-lg">
           {galleryImages.map((image, i) => (
             <Image
               key={image.alt}
@@ -141,7 +141,7 @@ const HeroInfrastructureSection = () => {
             <BsCheck className="h-3.5 w-3.5 text-green-7" />
           </span>
           <div>
-            <p className="text-sm font-semibold text-dark-green">
+            <p className="text-[14px] font-semibold text-dark-green">
               Payout sent — ₦240,000
             </p>
             <p className="text-xs text-gray-1">
@@ -156,7 +156,7 @@ const HeroInfrastructureSection = () => {
             <BsArrowDown className="h-3.5 w-3.5 text-yellow-green" />
           </span>
           <div>
-            <p className="text-sm font-semibold text-dark-green">
+            <p className="text-[14px] font-semibold text-dark-green">
               Contribution received — ₦5,000
             </p>
             <p className="text-xs text-gray-1">Adaeze N. · Daily Ajo</p>
