@@ -39,7 +39,7 @@ const SplitHero = ({
       <div>
         <SectionHeader text={eyebrow} textColor="text-green-1" />
 
-        <h1 className="text-4xl font-bold leading-13 text-dark-green sm:text-5xl">
+        <h1 className="text-[35px] font-bold leading-12 text-dark-green sm:text-[40px]">
           {lines.map((line, lineIndex) => (
             <span key={lineIndex} className="block">
               {line.map((segment, segIndex) => (
