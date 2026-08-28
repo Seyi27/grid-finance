@@ -100,69 +100,7 @@ const HeroInfrastructureSection = () => {
       </div>
 
       {/* Right: transitioning image gallery + floating stat cards */}
-      <div className="relative mx-auto w-full max-w-xl">
-        {/* Decorative line art, behind the image */}
-        <Image
-          src="/images/decorative-lines-bottom-right.svg"
-          alt=""
-          aria-hidden="true"
-          width={600}
-          height={400}
-          className="pointer-events-none absolute -bottom-10 -right-10 w-3/4 opacity-70"
-        />
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-lg">
-          {galleryImages.map((image, i) => (
-            <Image
-              key={image.alt}
-              src={image.src}
-              alt={image.alt}
-              fill
-              priority={i === 0}
-              className={`object-cover transition-opacity duration-1000 ease-in-out ${
-                i === activeIndex ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Floating card: Active loans */}
-        <div className="absolute left-0 -top-5 sm:-left-6 sm:top-8 rounded-xl border border-pale-yellow bg-white px-4 py-3 shadow-lg">
-          <p className="text-xs text-gray-1">Active loans</p>
-          <p className="mt-0.5 text-base font-bold text-dark-green">
-            ₦3.1M{" "}
-            <span className="text-xs font-semibold text-green-1">+4%</span>
-          </p>
-        </div>
-
-        {/* Floating card: Payout sent */}
-        <div className="absolute right-0 top-16 sm:-right-6 sm:top-16 flex items-start gap-3 rounded-xl border border-pale-yellow bg-white px-4 py-3 shadow-lg">
-          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-yellow-green">
-            <BsCheck className="h-3.5 w-3.5 text-green-7" />
-          </span>
-          <div>
-            <p className="text-sm font-semibold text-dark-green">
-              Payout sent — ₦240,000
-            </p>
-            <p className="text-xs text-gray-1">
-              Round 4 of 8 · Balogun Traders Circle
-            </p>
-          </div>
-        </div>
-
-        {/* Floating card: Contribution received */}
-        <div className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-xl border border-pale-yellow bg-white px-4 py-3 shadow-lg">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest-green">
-            <BsArrowDown className="h-3.5 w-3.5 text-yellow-green" />
-          </span>
-          <div>
-            <p className="text-sm font-semibold text-dark-green">
-              Contribution received — ₦5,000
-            </p>
-            <p className="text-xs text-gray-1">Adaeze N. · Daily Ajo</p>
-          </div>
-        </div>
-      </div>
 
       <WaitlistModal
         isOpen={waitlistOpen}
