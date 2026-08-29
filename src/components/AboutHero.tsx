@@ -18,7 +18,7 @@ const AboutHero = () => {
             </span>
           </div>
 
-          <h1 className="text-3xl font-bold leading-tight text-dark-green sm:text-4xl">
+          <h1 className="text-4xl font-bold leading-tight text-dark-green sm:text-5xl">
             We didn&apos;t invent how <br />
             Nigerians save and borrow.
             <br />
