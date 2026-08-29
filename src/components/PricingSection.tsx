@@ -19,7 +19,7 @@ const PricingSection = () => {
               Pricing
             </span>
           </div>
-          <h2 className="text-[35px] font-bold leading-tight text-dark-green sm:text-[40px] mx-auto max-w-2xl">
+          <h2 className="text-4xl font-bold leading-tight text-dark-green sm:text-5xl mx-auto max-w-2xl">
             Simple pricing,{" "}
             <span className="font-serif italic font-normal text-green-1">
               whatever you&apos;re launching.
